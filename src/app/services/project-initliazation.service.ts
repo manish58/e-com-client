@@ -10,7 +10,7 @@ import { Product } from '../model/product.model';
 })
 export class ProjectInitliazationService {
 
-  apiURL: string = "http://localhost:8800/api/v1/"
+  apiURL: string = "api/v1/"
   constructor(private http: HttpClient, private mvl: ModelView) { }
 
   getAllProducts() {
