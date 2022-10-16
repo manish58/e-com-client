@@ -1,0 +1,21 @@
+<div class="text-center form-signin w-50 m-auto">
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <h1 class="h3 mb-3 mt-5 fw-normal">Please sign in</h1>
+
+        <div class="form-floating m-5">
+            <input type="email" class="form-control" formControlName="email" id="floatingInput"
+                placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="error m-0" *ngIf="loginForm.get('email').errors?.pattern && formSubmitted">
+            Invalid Email
+        </div>
+        <div class="form-floating m-5">
+            <input type="password" class="form-control" formControlName="password" id="floatingPassword"
+                placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button class="w-75 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
+    </form>
+</div>

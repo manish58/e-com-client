@@ -1,0 +1,13 @@
+<main>
+    <div class="mt-3 w-75 mx-auto d-flex flex-wrap justify-content-evenly">
+        <div class="card me-3 mb-3 w-25 d-flex flex-wrap" *ngFor="let products of allProducts|async"
+            (click)="openProductDetail(products)">
+            <img [src]="products.image" class="card-img-top mt-2" height="200" width="200" style="object-fit: contain;"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-wrap">{{products?.title}}</h5>
+                <p class="card-text"><small class="text-muted">${{products?.price}}</small></p>
+            </div>
+        </div>
+    </div>
+</main>
